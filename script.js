@@ -14,22 +14,21 @@ function addProfile() {
   const formData = new FormData();
   formData.append('email', email);
   formData.append('profilePicture', profilePicture.files[0]);
-
   fetch('https://localhost:3000/api', {
     method: 'POST',
     body: formData
   })
     .then(response => {
       hideLoader();
-      if (response) {
+      if (response.status) {
         console.log('Email sent successfully!');
       } else {
         console.error('Failed to send email.');
       }
     })
     .catch(error => {
+      console.log("dddddd");
       hideLoader();
-
       console.error('An error occurred:', error);
     });
 }
