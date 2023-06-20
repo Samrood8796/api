@@ -1,7 +1,7 @@
 const email = document.getElementById('email')
 const profilePicture = document.getElementById('profile')
-function addProfile() {
-
+function addProfile(e) {
+  e.preventDefault()
   console.log(email.value);
   console.log(profilePicture.files[0]);
   if (!profilePicture.files[0] || !email.value) {
