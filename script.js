@@ -6,7 +6,7 @@ function addProfile() {
   console.log(profilePicture.files[0]);
   if (!profilePicture.files[0] || !email.value) {
     Toastify({
-      text: "you should write something",
+      text: "field can't be empty",
     }).showToast();
     return;
   }
