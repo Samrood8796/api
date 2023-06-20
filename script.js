@@ -16,7 +16,7 @@ function addProfile(e) {
   formData.append('profilePicture', profilePicture.files[0]);
   fetch('https://localhost:3000/api', {
     method: 'POST',
-    body: formData
+    body: formData 
   })
     .then(response => {
       hideLoader();
